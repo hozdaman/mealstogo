@@ -4,27 +4,22 @@ import {
   StyleSheet,
   Text,
   View,
-  SafeAreaView,
   Platform,
-  StatusBar,
   FlatList,
 } from 'react-native';
 import styled from 'styled-components/native';
 import { Searchbar } from 'react-native-paper';
 
 import { RestaurantInfoCard } from '../components/restaurant-info-card.component.js';
+import { SafeArea } from '../../../components/utility/safe-area.component.js';
 
-const SafeArea = styled.SafeAreaView`
-  
-  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
-`;
+
 const SearchContainer = styled.View`
 
   flex: 1;
   padding: ${(props) => props.theme.space[3]};
   background-color: ${(props) => props.theme.colors.bg.secondary};
 
- 
 `;
 
 const RestaurantList = styled(FlatList).attrs({
